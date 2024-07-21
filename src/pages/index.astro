@@ -1,0 +1,36 @@
+---
+import Layout from '../layouts/Layout.astro';
+import SocialPill from '../components/SocialPill.astro';
+import Experience from '../components/Experience.astro'
+import SectionContainer from '../components/SectionContainer.astro'
+import LinkedIn from '../icons/LinkedIn.astro';
+import GitHub from '../icons/GitHub.astro';
+---
+
+<Layout title="annjudev - Porfolio de Juan Ramírez">
+	<SectionContainer class="pt-40 pb-48">
+		<div>
+			<h2 class="text-6xl font-bold flex flex-col"><span class="text-xl">Hola! 👋🏽👋🏽</span> Soy Juan Ramírez</h2>
+			<p class="text-xl pt-4 font-medium max-w-3xl">Desarrollador de software con enfoque en <span class="text-yellow-300 font-bold">JavaScript</span> y automatizaciónes, comprometido con ofrecer soluciones tecnológicas que satisfagan las necesidades del cliente.</p>
+		</div>
+		<section class="flex gap-3 pt-6">
+			<SocialPill href="https://www.linkedin.com/in/annjudev/">
+				<LinkedIn class="size-7"/>
+				LinkedIn
+			</SocialPill>
+			<SocialPill href="https://github.com/annjudev">
+				<GitHub class="size-7"/>
+				GitHub
+			</SocialPill>
+		</section>
+	</SectionContainer>
+	<SectionContainer id="experiencia">
+		<h2 class="text-3xl font-bold">Experiencia laboral</h2>
+		<Experience class="ml-2 mt-16"/>
+	</SectionContainer>
+	<SectionContainer id="proyectos">
+		<h2 class="text-3xl font-bold mb-20">Proyectos</h2>
+
+	</SectionContainer>
+</Layout>
+

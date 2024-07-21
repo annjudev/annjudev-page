@@ -1,0 +1,35 @@
+---
+const dataExperience = [
+  {
+    date: 'Acualmente...',
+    title: 'Desarrollador de software',
+    companyName: ` UNAD - Univerdiad Nacional Abierta y a Distancia`,
+    desciption: 'Trabajo en la automatización de procesos, y en el mantenimiento y mejora de los ambientes virtuales de aprendizaje. Contribuyendo de esta manera a la optimización del flujo de trabajo tanto de los docentes, como también al flujo de aprendizaje de los estudiantes.'
+  },
+  {
+    date: 'Febrero 20 de 2023',
+    title: 'Desarrollador Freelance',
+    companyName: 'Eventos Prinss Vip - Club Valmaria',
+    desciption: 'Desarrollo de la página principal, diseñando una interfaz funcional para computadores y móviles, permitiendo tener una experiencia completa con cada usuario.'
+  },
+]
+---
+<ol class=`relative border-s border-gray-200 dark:border-gray-700 ${Astro.props.class}`>   
+  {
+    dataExperience.map(({date, title, companyName, desciption}) =>
+      <li class="mb-16 ml-5 ms-4 flex justify-between gap-4">
+        <section class="w-[40%] flex flex-col gap-1">
+          <div class="absolute w-3 h-3 bg-cyan-600 rounded-full mt-1.5 -start-1.5 "></div>
+          <h3 class="text-2xl font-bold text-cyan-600">{title}</h3>
+          <h4 class="text-balance font-bold text-base">{companyName}</h4>
+          <time class="text-gray-200/90">{date}</time>
+        </section>
+        <section class="w-[60%]">
+          <p class="text-xl">{desciption}</p>
+        </section>
+      </li>
+    )
+  }               
+  
+</ol>
+
