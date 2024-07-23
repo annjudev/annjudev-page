@@ -1,13 +1,26 @@
-<header class="w-full">
-  <nav class="py-4 px-56 flex justify-between w-full">
-    <a href="/" class="flex justify-center items-center gap-3">
+
+
+<header class="w-full fixed py-4 top-0">
+  <nav class="py-3 mx-auto max-w-2xl px-4 rounded-full flex justify-between w-full">
+    <a href="#home" class="flex pl-2 justify-center items-center gap-3">
       <img class="size-6 rounded-full" src="/juan-ramirez-foto.jpg" alt="">
       @annjudev</a>
     <ul class="flex justify-end w-full [&>li>a]:p-2 [&>li>a:hover]:text-cyan-300 font-medium text-base">
       <li><a href="#experiencia">Experiencia</a></li>
-      <li><a href="#proyectos">Proyectos</a></li>
+      <li><a href="#proyectos">Trabajos</a></li>
       <li><a href="#">Sobre mí</a></li>
       <li><a href="#">Contancto</a></li>
     </ul>
   </nav>
+
+  <script>
+    window.addEventListener('scroll', () => {
+      const nav = document.querySelector('nav')
+      
+      window.scrollY > 0 
+      ? nav.classList.add('bottom')
+      : nav.classList.remove('bottom')
+      
+    })
+  </script>
 </header>
