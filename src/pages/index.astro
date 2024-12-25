@@ -1,17 +1,19 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import SocialPill from '../components/SocialPill.astro';
-import Experience from '../components/Experience.astro'
 import SectionContainer from '../components/SectionContainer.astro'
 import LinkedIn from '../icons/LinkedIn.astro';
 import GitHub from '../icons/GitHub.astro';
+import Services from '../components/Services.astro';
+import Card from '../components/Card.astro';
 ---
 
 <Layout title="annjudev - Porfolio de Juan Ramírez">
-	<SectionContainer id="home" class="pt-40 pb-48">
+	<SectionContainer class="pt-40 pb-40">
 		<div>
 			<h2 class="text-6xl font-bold flex flex-col"><span class="text-xl">Hola! 👋🏽👋🏽</span> Soy Juan Ramírez</h2>
-			<p class="text-xl pt-4 font-medium max-w-3xl">Desarrollador de software con enfoque en <span class="text-yellow-300 font-bold">JavaScript</span> y automatizaciónes, comprometido con ofrecer soluciones tecnológicas que satisfagan las necesidades del cliente.</p>
+			<p class="text-xl pt-4 font-medium max-w-3xl">Desarrollador de software con experiencia en <strong class="text-yellow-500">automatizaciones</strong> y desarrollo de<strong class="text-yellow-500"> páginas web personalizadas</strong>.
+				Cuento con más de un año dedicándome a ofrecer soluciones prácticas y eficientes, he trabajado en proyectos que han simplificado procesos y elevado la presencia digital de mis clientes.</p>
 		</div>
 		<section class="flex gap-3 pt-6">
 			<SocialPill href="https://www.linkedin.com/in/annjudev/">
@@ -24,13 +26,26 @@ import GitHub from '../icons/GitHub.astro';
 			</SocialPill>
 		</section>
 	</SectionContainer>
-	<SectionContainer id="experiencia">
-		<h2 class="text-3xl font-bold">Experiencia laboral</h2>
-		<Experience class="ml-2 mt-16"/>
+	<SectionContainer title="Servicios">
+		<Services />
 	</SectionContainer>
-	<SectionContainer id="proyectos">
-		<h2 class="text-3xl font-bold mb-20">Trabajos</h2>
+	<SectionContainer class="mt-20" title="Trabajos">
+		<section class="grid grid-cols-8 grid-rows-2 gap-3">
+			<Card title="Ambiente virtual de aprendizaje (AVA)" class="col-start-1 col-end-6" img="images/ses-ava-6.png">
+				El Ambiente Virtual de Aprendizaje es la plataforma principal de la UNAD, diseñada para que los estudiantes accedan y desarrollen sus cursos de manera autónoma, interactiva y eficiente.
+			</Card>
+			<Card title="BRTC - Bloque revisor tecnopedagógico de curso" class="col-start-6 col-end-9" img="images/brtc.png"/>
+			<Card title="Revisor de instancia" class="col-start-1 col-end-4" img="images/instance-revisor.png">
+				Es un validador y configurador, de las instancias. Permitiendo que todas esten correctamente configuradas para cada entrega. 
+			</Card>
+			<Card title="Club Valmaria" class="col-start-4 col-end-9" img="images/clubvalmaria.png">
+				La página de Club Valmaria es un sitio personalizado y desarrollado con WordPress, integrando herramientas clave para una experiencia funcional y atractiva.
+			</Card>
+		</section>
+	</SectionContainer>
+	<SectionContainer class="mt-20" title="Sobre mi">
+	</SectionContainer>
 
-	</SectionContainer>
+	
 </Layout>
 
