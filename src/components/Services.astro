@@ -1,0 +1,26 @@
+---
+const services = [
+  {
+    name: 'Automatización de procesos',
+    description: 'Creación de automatizaciones eficientes y personalizadas para frontend, utilizando tecnologías como JavaScript. Esto permite la optimización de procesos, mejora de flujos de trabajo y reducción de errores adaptados a las necesidades de cada proyecto.'
+  }, 
+  {
+    name: 'Desarrollo de páginas web',
+    description: 'Desarrollo de páginas web optimizadas y eficientes, utilizando tecnologías como HTML, CSS, JavaScript, Tailwind, y Astro para un rendimiento superior. También se implementan soluciones dinámicas con CMS como WordPress. No incluye diseño, solo la implementación y desarrollo técnico.'
+  }
+]
+---
+
+<ol class="relative ml-2 border-s border-slate-500 "> 
+  {
+    services.map(({name, description}) => {
+      return <li class="mb-5 ms-4 py-4">
+        <div class="absolute size-4 rounded-full -start-2 border  border-yellow-500 bg-yellow-500"></div>
+        <h3 class="mb-1 text-xl font-bold leading-none text-yellow-500">{name}</h3>
+        <p class="my-4 text-lg font-normal text-white">{description}</p>
+        <a href="mailto:Juanchoramirez2001@gmail.com" class="inline-flex items-center px-4 py-2 text-normal font-medium border rounded-lg focus:z-10  focus:outline-none  bg-green-600 border-green-700  text-white hover:bg-green-700">Cotizar</a>
+      </li>
+    })
+  }                
+</ol>
+
