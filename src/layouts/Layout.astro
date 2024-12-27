@@ -24,8 +24,13 @@ const { title } = Astro.props;
 		<div ></div>
 		<Headers />
 		<slot />
-		<footer class="min-h-10">
-
+		<footer class="min-h-20 max-w-[900px] pb-12 text-gray-400/90 font-bold m-auto flex items-center justify-between">
+			<a href="/">@annjudev</a>
+			<ul class="flex gap-4 justify-center">
+				<li><a target="_blank" href="https://github.com/annjudev">Github</a></li>
+				<li><a target="_blank" href="https://www.linkedin.com/in/annjudev/">LinkedIn</a></li>
+				<li><a target="_blank" href="mailto:Juanchoramirez2001@gmail.com">Correo</a></li>
+			</ul>
 		</footer>
 	</body>
 </html>

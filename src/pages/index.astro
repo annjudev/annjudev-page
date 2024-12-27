@@ -26,10 +26,10 @@ import Card from '../components/Card.astro';
 			</SocialPill>
 		</section>
 	</SectionContainer>
-	<SectionContainer title="Servicios">
+	<SectionContainer title="Servicios" id="services">
 		<Services />
 	</SectionContainer>
-	<SectionContainer class="mt-20" title="Trabajos">
+	<SectionContainer class="mt-20" title="Trabajos" id="works">
 		<section class="grid grid-cols-8 grid-rows-2 gap-3">
 			<Card title="Ambiente virtual de aprendizaje (AVA)" class="col-start-1 col-end-6" img="images/ses-ava-6.png">
 				El Ambiente Virtual de Aprendizaje es la plataforma principal de la UNAD, diseñada para que los estudiantes accedan y desarrollen sus cursos de manera autónoma, interactiva y eficiente.
@@ -43,9 +43,16 @@ import Card from '../components/Card.astro';
 			</Card>
 		</section>
 	</SectionContainer>
-	<SectionContainer class="mt-20" title="Sobre mi">
-	</SectionContainer>
+	<SectionContainer class="my-20" title="Sobre mi" id=about-me>
+		<div class="flex justify-between">
+			<div class="flex flex-col gap-3">
+				<p>Soy un desarrollador de software <strong class="text-yellow-300">enfocado en la creación de soluciones que optimizan procesos y automatizan tareas.</strong> Desde joven, me apasiona el mundo de los computadores, lo que me llevó a aprender de forma autodidacta y capacitarme en plataformas como Platzi.</p>
+				<p>Con un año de experiencia en la UNAD, <strong class="text-yellow-300">he desarrollado herramientas que han mejorado la eficiencia operativa</strong> mediante automatización y sistemas personalizados. Mi enfoque está en entender las necesidades específicas de cada proyecto para entregar resultados funcionales y efectivos.</p>
+				<p>Siempre busco mantenerme actualizado, garantizando soluciones innovadoras para mis clientes.</p>
+			</div>
+			<img class="w-[250px] bg-slate-800/55 rotate-12 -z-10 p-3 rounded border-2 border-slate-900 object-cover" src="juan-ramirez-foto.jpg" alt="">
 
-	
+		</div>
+	</SectionContainer>
 </Layout>
 

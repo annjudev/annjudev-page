@@ -1,8 +1,8 @@
 ---
-const { title } = Astro.props
+const { title, id } = Astro.props
 ---
 
-<section class={`${Astro.props.class} max-w-[900px] mx-auto`}>
+<section id={id} class={`${Astro.props.class} max-w-[900px] mx-auto`}>
   {
     title && <h2 class="text-4xl pb-14 font-bold">{title}</h2>
   }
