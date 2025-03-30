@@ -7,6 +7,25 @@ import GitHub from '../icons/GitHub.astro';
 import WhatsApp from '../icons/WhatsApp.astro';
 import Services from '../components/Services.astro';
 import Card from '../components/Card.astro';
+import Tecnologies from '../components/Tecnologies.astro';
+const services = [
+	{
+		title: "Desarrollo Web Moderno",
+		description: "Creamos sitios web modernos y responsivos utilizando las últimas tecnologías como Astro, React y Tailwind CSS. Optimizados para rendimiento y experiencia de usuario."
+	},
+	{
+		title: "WordPress",
+		description: "Desarrollo y personalización de sitios web en WordPress, integrando funcionalidades avanzadas y diseños modernos."
+	},
+	{
+		title: "Rendimiento",
+		description: "Optimización de velocidad y rendimiento web para una experiencia de usuario excepcional."
+	},
+	{
+		title: "Diseño Responsivo",
+		description: "Creamos diseños que se adaptan perfectamente a todos los dispositivos, garantizando una experiencia consistente en cualquier pantalla."
+	}
+];
 ---
 
 <Layout title="Juan Ramírez - Desarrollador Web Frontend">
@@ -21,13 +40,13 @@ import Card from '../components/Card.astro';
 					Desarrollador Web Frontend especializado en crear <strong class="text-yellow-500">experiencias digitales impactantes</strong>. Transformo ideas en sitios web modernos y funcionales que destacan tu marca.
 				</p>
 				<div class="flex flex-wrap justify-center gap-2 sm:gap-3 lg:gap-4 text-sm sm:text-base lg:text-lg">
-					<span class="px-3 sm:px-4 py-1.5 sm:py-2 rounded-full bg-yellow-500/10 text-yellow-500">HTML5</span>
-					<span class="px-3 sm:px-4 py-1.5 sm:py-2 rounded-full bg-yellow-500/10 text-yellow-500">CSS3</span>
-					<span class="px-3 sm:px-4 py-1.5 sm:py-2 rounded-full bg-yellow-500/10 text-yellow-500">JavaScript</span>
-					<span class="px-3 sm:px-4 py-1.5 sm:py-2 rounded-full bg-yellow-500/10 text-yellow-500">Astro</span>
-					<span class="px-3 sm:px-4 py-1.5 sm:py-2 rounded-full bg-yellow-500/10 text-yellow-500">Tailwind CSS</span>
-					<span class="px-3 sm:px-4 py-1.5 sm:py-2 rounded-full bg-yellow-500/10 text-yellow-500">Vite.js</span>
-					<span class="px-3 sm:px-4 py-1.5 sm:py-2 rounded-full bg-yellow-500/10 text-yellow-500">WordPress</span>
+					<Tecnologies title="HTML5" />
+					<Tecnologies title="CSS3" />
+					<Tecnologies title="JavaScript" />
+					<Tecnologies title="Astro" />
+					<Tecnologies title="Tailwind CSS" />
+					<Tecnologies title="Vite.js" />
+					<Tecnologies title="WordPress" />
 				</div>
 			</div>
 			
@@ -59,28 +78,34 @@ import Card from '../components/Card.astro';
 	<SectionContainer title="Servicios" id="services">
 		<Services />
 	</SectionContainer>
-	<SectionContainer class="mt-16 sm:mt-20 lg:mt-24 xl:mt-32" title="Proyectos Destacados" id="works">
-		<section class="grid grid-cols-8 grid-rows-2 gap-3 sm:gap-4 lg:gap-6">
-			<Card title="Ambiente virtual de aprendizaje (AVA)" class="col-start-1 col-end-6" img="images/ses-ava-6.png">
-				El Ambiente Virtual de Aprendizaje es la plataforma principal de la UNAD, diseñada para que los estudiantes accedan y desarrollen sus cursos de manera autónoma, interactiva y eficiente.
-			</Card>
-			<Card title="BRTC - Bloque revisor tecnopedagógico de curso" class="col-start-6 col-end-9" img="images/brtc.png"/>
-			<Card title="Revisor de instancia" class="col-start-1 col-end-4" img="images/instance-revisor.png">
-				Es un validador y configurador, de las instancias. Permitiendo que todas esten correctamente configuradas para cada entrega. 
-			</Card>
-			<Card title="Club Valmaria" class="col-start-4 col-end-9" img="images/clubvalmaria.png">
-				La página de Club Valmaria es un sitio personalizado y desarrollado con WordPress, integrando herramientas clave para una experiencia funcional y atractiva.
-			</Card>
+	<SectionContainer class="mt-16 sm:mt-20 lg:mt-24 xl:mt-32" title="Lo que Ofrecemos" id="works">
+		<section class="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 lg:gap-8">
+			{services.map(service => (
+				<Card title={service.title} description={service.description} />
+			))}
 		</section>
 	</SectionContainer>
-	<SectionContainer class="my-16 sm:my-20 lg:my-24 xl:my-32" title="Sobre mi" id=about-me>
+	<SectionContainer class="my-16 sm:my-20 lg:my-24 xl:my-32" title="Mi Enfoque" id="about-me">
 		<div class="flex flex-col lg:flex-row justify-between gap-6 lg:gap-8 xl:gap-12">
 			<div class="flex flex-col gap-4 lg:gap-6">
-				<p class="text-base sm:text-lg lg:text-xl leading-relaxed">Soy un desarrollador web frontend <strong class="text-yellow-300">apasionado por crear experiencias digitales excepcionales</strong>. Mi enfoque se centra en desarrollar sitios web modernos, responsivos y optimizados para el rendimiento.</p>
-				<p class="text-base sm:text-lg lg:text-xl leading-relaxed">Con experiencia en el desarrollo de landing pages, blogs y sitios web informativos, <strong class="text-yellow-300">me especializo en crear soluciones que combinan diseño atractivo con funcionalidad</strong>. Utilizo tecnologías modernas como React, Astro, y Tailwind CSS para entregar resultados de alta calidad.</p>
-				<p class="text-base sm:text-lg lg:text-xl leading-relaxed">Mi compromiso es mantener los más altos estándares de desarrollo web y estar siempre actualizado con las últimas tendencias y tecnologías.</p>
+				<p class="text-base sm:text-lg lg:text-xl leading-relaxed">
+					Con <strong class="text-yellow-300">1.5 años de experiencia en desarrollo web</strong>, me especializo en crear soluciones tecnológicas que no solo funcionan, sino que también son fáciles de mantener y escalar. Mi enfoque se centra en escribir código limpio, modular y bien documentado.
+				</p>
+				<p class="text-base sm:text-lg lg:text-xl leading-relaxed">
+					Actualmente, desarrollo soluciones para la <strong class="text-yellow-300">Universidad Nacional Abierta y a Distancia (UNAD)</strong>, donde he demostrado mi capacidad para cumplir con los requerimientos técnicos y entregar proyectos de alta calidad que satisfacen las necesidades de la institución.
+				</p>
+				<div class="grid grid-cols-2 gap-4 mt-4">
+					<div class="p-4 rounded-lg bg-slate-800/50 border border-slate-700">
+						<h4 class="text-lg font-bold text-yellow-500 mb-2">Código Limpio</h4>
+						<p class="text-sm text-gray-300">Modular y mantenible</p>
+					</div>
+					<div class="p-4 rounded-lg bg-slate-800/50 border border-slate-700">
+						<h4 class="text-lg font-bold text-yellow-500 mb-2">Experiencia UNAD</h4>
+						<p class="text-sm text-gray-300">Desarrollo institucional</p>
+					</div>
+				</div>
 			</div>
-			<img class="w-[250px] sm:w-[280px] lg:w-[300px] mx-auto lg:mx-0 bg-slate-800/55 rotate-12 -z-10 p-3 rounded border-2 border-slate-900 object-cover" src="juan-ramirez-foto.jpg" alt="Juan Ramírez - Desarrollador Web Frontend">
+			<img class="rounded-2xl w-[250px] h-[250px] sm:w-[280px] sm:h-[280px] lg:w-[300px] lg:h-[300px] mx-auto lg:mx-0 bg-slate-800/55 rotate-[20deg] -z-10 p-3 rounded border-2 border-slate-900 object-cover" src="juan-ramirez-foto.jpg" alt="Juan Ramírez - Desarrollador Web Frontend">
 		</div>
 	</SectionContainer>
 </Layout>
