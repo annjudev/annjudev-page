@@ -1,33 +1,26 @@
 ---
-const {
-  title, 
-  img, 
-} = Astro.props
+interface Props {
+  title: string;
+  img: string;
+  class?: string;
+}
+
+const { title, img, class: className } = Astro.props;
 ---
 
-<article class={`${Astro.props.class} relative min-h-[22rem] sm:min-h-[26rem]`}>
-  <div 
-    class="
-      absolute
-      top-0 bottom-0 left-0 right-0
-      bg-slate-600/30 rounded 
-      bg-cover bg-center
-      border-none flex 
-      flex-col justify-end gap-3
-      bg-blend-luminosity
-      bg-no-repeat -z-10 w-full h-full
-      "
-    style=`background-image: url(${img});`>
-    <div 
-      class="
-      absolute z-10 bottom-0 top-0 w-full h-full
-      bg-gradient-to-b from-transparent via-black/40 to-black"></div>
-    
-    <div class="z-20 py-4 sm:py-6 px-4 sm:px-6 flex flex-col gap-3 sm:gap-5">
-      <h4 class="font-bold text-2xl sm:text-3xl">{title}</h4>
-      <p class="font-normal text-base sm:text-lg text-balance">
-        <slot />
-      </p>
-    </div>
+<article class:list={["relative group overflow-hidden rounded-lg bg-slate-800/55 border border-slate-700/50", className]}>
+  <div class="relative aspect-video overflow-hidden">
+    <img 
+      src={img} 
+      alt={title}
+      class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+    />
+    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+  </div>
+  <div class="absolute bottom-0 left-0 right-0 p-4 sm:p-5 lg:p-6">
+    <h3 class="text-lg sm:text-xl lg:text-2xl font-bold text-white mb-2 sm:mb-3">{title}</h3>
+    <p class="text-sm sm:text-base lg:text-lg text-gray-300">
+      <slot />
+    </p>
   </div>
 </article>

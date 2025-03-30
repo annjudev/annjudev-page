@@ -11,46 +11,46 @@ import Card from '../components/Card.astro';
 
 <Layout title="Juan Ramírez - Desarrollador Web Frontend">
 	<SectionContainer class="min-h-screen flex items-center">
-		<div class="max-w-4xl mx-auto text-center space-y-12 sm:space-y-16">
-			<div class="space-y-8 sm:space-y-10">
-				<h1 class="text-4xl sm:text-6xl md:text-7xl font-bold">
-					<span class="text-lg sm:text-xl md:text-2xl block mb-4 sm:mb-6 text-yellow-500">¡Hola! 👋🏽</span>
+		<div class="max-w-4xl mx-auto text-center space-y-8 lg:space-y-12">
+			<div class="space-y-6 lg:space-y-8">
+				<h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold">
+					<span class="text-base sm:text-lg md:text-xl lg:text-2xl block mb-3 lg:mb-4 text-yellow-500">¡Hola! 👋🏽</span>
 					Soy Juan Ramírez
 				</h1>
-				<p class="text-lg sm:text-xl md:text-2xl font-medium text-gray-300 max-w-3xl mx-auto leading-relaxed">
+				<p class="text-base sm:text-lg md:text-xl lg:text-2xl font-medium text-gray-300 max-w-3xl mx-auto leading-relaxed">
 					Desarrollador Web Frontend especializado en crear <strong class="text-yellow-500">experiencias digitales impactantes</strong>. Transformo ideas en sitios web modernos y funcionales que destacan tu marca.
 				</p>
-				<div class="flex flex-wrap justify-center gap-3 sm:gap-4 text-sm sm:text-base">
-					<span class="px-4 py-2 rounded-full bg-yellow-500/10 text-yellow-500">HTML5</span>
-					<span class="px-4 py-2 rounded-full bg-yellow-500/10 text-yellow-500">CSS3</span>
-					<span class="px-4 py-2 rounded-full bg-yellow-500/10 text-yellow-500">JavaScript</span>
-					<span class="px-4 py-2 rounded-full bg-yellow-500/10 text-yellow-500">Astro</span>
-					<span class="px-4 py-2 rounded-full bg-yellow-500/10 text-yellow-500">Tailwind CSS</span>
-					<span class="px-4 py-2 rounded-full bg-yellow-500/10 text-yellow-500">Vite.js</span>
-					<span class="px-4 py-2 rounded-full bg-yellow-500/10 text-yellow-500">WordPress</span>
+				<div class="flex flex-wrap justify-center gap-2 sm:gap-3 lg:gap-4 text-sm sm:text-base lg:text-lg">
+					<span class="px-3 sm:px-4 py-1.5 sm:py-2 rounded-full bg-yellow-500/10 text-yellow-500">HTML5</span>
+					<span class="px-3 sm:px-4 py-1.5 sm:py-2 rounded-full bg-yellow-500/10 text-yellow-500">CSS3</span>
+					<span class="px-3 sm:px-4 py-1.5 sm:py-2 rounded-full bg-yellow-500/10 text-yellow-500">JavaScript</span>
+					<span class="px-3 sm:px-4 py-1.5 sm:py-2 rounded-full bg-yellow-500/10 text-yellow-500">Astro</span>
+					<span class="px-3 sm:px-4 py-1.5 sm:py-2 rounded-full bg-yellow-500/10 text-yellow-500">Tailwind CSS</span>
+					<span class="px-3 sm:px-4 py-1.5 sm:py-2 rounded-full bg-yellow-500/10 text-yellow-500">Vite.js</span>
+					<span class="px-3 sm:px-4 py-1.5 sm:py-2 rounded-full bg-yellow-500/10 text-yellow-500">WordPress</span>
 				</div>
 			</div>
 			
-			<div class="flex flex-col sm:flex-row justify-center gap-4 sm:gap-6">
-				<a href="#contact" class="bg-yellow-500 text-black px-8 py-4 rounded-lg font-semibold hover:bg-yellow-400 transition-colors text-lg sm:text-xl">
+			<div class="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4 lg:gap-6">
+				<a href="#contact" class="bg-yellow-500 text-black px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold hover:bg-yellow-400 transition-colors text-base sm:text-lg lg:text-xl">
 					Contáctame
 				</a>
-				<a href="#works" class="border border-yellow-500 text-yellow-500 px-8 py-4 rounded-lg font-semibold hover:bg-yellow-500/10 transition-colors text-lg sm:text-xl">
+				<a href="#works" class="border border-yellow-500 text-yellow-500 px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold hover:bg-yellow-500/10 transition-colors text-base sm:text-lg lg:text-xl">
 					Ver Proyectos
 				</a>
 			</div>
 
-			<div class="flex flex-wrap justify-center gap-4 sm:gap-6">
+			<div class="flex flex-wrap justify-center gap-3 sm:gap-4 lg:gap-6">
 				<SocialPill href="https://www.linkedin.com/in/annjudev/" class="hover:bg-yellow-500/10 transition-colors">
-					<LinkedIn class="size-6 sm:size-7"/>
+					<LinkedIn class="size-5 sm:size-6 lg:size-7"/>
 					LinkedIn
 				</SocialPill>
 				<SocialPill href="https://github.com/annjudev" class="hover:bg-yellow-500/10 transition-colors">
-					<GitHub class="size-6 sm:size-7"/>
+					<GitHub class="size-5 sm:size-6 lg:size-7"/>
 					GitHub
 				</SocialPill>
 				<SocialPill href="https://wa.me/573001234567" class="hover:bg-yellow-500/10 transition-colors">
-					<WhatsApp class="size-6 sm:size-7"/>
+					<WhatsApp class="size-5 sm:size-6 lg:size-7"/>
 					WhatsApp
 				</SocialPill>
 			</div>
@@ -59,8 +59,8 @@ import Card from '../components/Card.astro';
 	<SectionContainer title="Servicios" id="services">
 		<Services />
 	</SectionContainer>
-	<SectionContainer class="mt-24 sm:mt-32" title="Proyectos Destacados" id="works">
-		<section class="grid grid-cols-8 grid-rows-2 gap-4 sm:gap-6">
+	<SectionContainer class="mt-16 sm:mt-20 lg:mt-24 xl:mt-32" title="Proyectos Destacados" id="works">
+		<section class="grid grid-cols-8 grid-rows-2 gap-3 sm:gap-4 lg:gap-6">
 			<Card title="Ambiente virtual de aprendizaje (AVA)" class="col-start-1 col-end-6" img="images/ses-ava-6.png">
 				El Ambiente Virtual de Aprendizaje es la plataforma principal de la UNAD, diseñada para que los estudiantes accedan y desarrollen sus cursos de manera autónoma, interactiva y eficiente.
 			</Card>
@@ -73,14 +73,14 @@ import Card from '../components/Card.astro';
 			</Card>
 		</section>
 	</SectionContainer>
-	<SectionContainer class="my-24 sm:my-32" title="Sobre mi" id=about-me>
-		<div class="flex flex-col lg:flex-row justify-between gap-8 lg:gap-12">
-			<div class="flex flex-col gap-4 sm:gap-6">
-				<p class="text-base sm:text-lg leading-relaxed">Soy un desarrollador web frontend <strong class="text-yellow-300">apasionado por crear experiencias digitales excepcionales</strong>. Mi enfoque se centra en desarrollar sitios web modernos, responsivos y optimizados para el rendimiento.</p>
-				<p class="text-base sm:text-lg leading-relaxed">Con experiencia en el desarrollo de landing pages, blogs y sitios web informativos, <strong class="text-yellow-300">me especializo en crear soluciones que combinan diseño atractivo con funcionalidad</strong>. Utilizo tecnologías modernas como React, Astro, y Tailwind CSS para entregar resultados de alta calidad.</p>
-				<p class="text-base sm:text-lg leading-relaxed">Mi compromiso es mantener los más altos estándares de desarrollo web y estar siempre actualizado con las últimas tendencias y tecnologías.</p>
+	<SectionContainer class="my-16 sm:my-20 lg:my-24 xl:my-32" title="Sobre mi" id=about-me>
+		<div class="flex flex-col lg:flex-row justify-between gap-6 lg:gap-8 xl:gap-12">
+			<div class="flex flex-col gap-4 lg:gap-6">
+				<p class="text-base sm:text-lg lg:text-xl leading-relaxed">Soy un desarrollador web frontend <strong class="text-yellow-300">apasionado por crear experiencias digitales excepcionales</strong>. Mi enfoque se centra en desarrollar sitios web modernos, responsivos y optimizados para el rendimiento.</p>
+				<p class="text-base sm:text-lg lg:text-xl leading-relaxed">Con experiencia en el desarrollo de landing pages, blogs y sitios web informativos, <strong class="text-yellow-300">me especializo en crear soluciones que combinan diseño atractivo con funcionalidad</strong>. Utilizo tecnologías modernas como React, Astro, y Tailwind CSS para entregar resultados de alta calidad.</p>
+				<p class="text-base sm:text-lg lg:text-xl leading-relaxed">Mi compromiso es mantener los más altos estándares de desarrollo web y estar siempre actualizado con las últimas tendencias y tecnologías.</p>
 			</div>
-			<img class="w-[280px] sm:w-[300px] mx-auto lg:mx-0 bg-slate-800/55 rotate-12 -z-10 p-3 rounded border-2 border-slate-900 object-cover" src="juan-ramirez-foto.jpg" alt="Juan Ramírez - Desarrollador Web Frontend">
+			<img class="w-[250px] sm:w-[280px] lg:w-[300px] mx-auto lg:mx-0 bg-slate-800/55 rotate-12 -z-10 p-3 rounded border-2 border-slate-900 object-cover" src="juan-ramirez-foto.jpg" alt="Juan Ramírez - Desarrollador Web Frontend">
 		</div>
 	</SectionContainer>
 </Layout>

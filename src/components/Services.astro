@@ -1,48 +1,45 @@
 ---
 const services = [
   {
-    name: 'Diseño de Landing Pages Profesionales',
-    description: 'Desarrollo de landing page personalizada basada en tus preferencias y necesidades. Incluye: Diseño responsivo y moderno, optimización SEO, formularios de contacto, integración con redes sociales, análisis de Google Analytics, optimización de velocidad y entrega garantizada en máximo 3 semanas. Trabajamos contigo para crear la página web perfecta que represente tu marca.',
-    link: '/services/landing-page'
-  }, 
-  {
-    name: 'Plan de Mantenimiento y Ajustes',
-    description: 'Suscripción mensual que incluye: 25 ajustes menores mensuales (cambios de texto, imágenes, estilos, etc.), 3 ajustes mayores (nuevas funcionalidades, secciones completas, integraciones), soporte técnico prioritario, copias de seguridad semanales y monitoreo de rendimiento. Ideal para mantener tu sitio web actualizado y funcional.',
-    link: '/services/maintenance'
+    name: 'Diseño de Landing Pages',
+    description: 'Desarrollo de landing page personalizada basada en tus preferencias y necesidades. Incluye diseño responsivo, optimización SEO, formularios de contacto y más.',
+    href: '/services/landing-page'
   },
   {
-    name: 'Desarrollo de Automatizaciones',
-    description: 'Creación de software y automatizaciones personalizadas utilizando JavaScript y tecnologías web modernas como Astro. Desarrollamos soluciones específicas para optimizar procesos, mejorar flujos de trabajo y reducir tareas manuales. Incluye análisis de requisitos, desarrollo, pruebas y capacitación de uso.',
-    link: '/services/automation'
+    name: 'Automatización de Procesos',
+    description: 'Desarrollo de soluciones de automatización personalizadas para optimizar tus procesos empresariales. Incluye análisis de procesos, desarrollo de scripts y más.',
+    href: '/services/automation'
+  },
+  {
+    name: 'Mantenimiento y Soporte',
+    description: 'Servicios de mantenimiento y soporte técnico continuo para mantener tus sistemas funcionando de manera óptima. Incluye monitoreo proactivo, actualizaciones y más.',
+    href: '/services/maintenance'
   }
-]
+];
 ---
 
-<div class="container mx-auto">
-  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-    {
-      services.map(({name, description, link}) => {
-        return (
-          <div class="group relative bg-slate-800/50 border border-slate-700 rounded-xl p-6 sm:p-8 hover:border-yellow-500 transition-all duration-300 flex flex-col min-h-[400px] sm:min-h-[450px]">
-            <div class="absolute -top-4 -left-4 flex items-center justify-center">
-              <div class="size-6 sm:size-7 rounded-full border border-yellow-500 bg-yellow-500"></div>
-            </div>
-            <div class="flex-1">
-              <h3 class="text-xl sm:text-2xl font-bold text-yellow-500 mb-4 sm:mb-6">{name}</h3>
-              <p class="text-slate-300 text-base sm:text-lg leading-relaxed line-clamp-6 sm:line-clamp-none">{description}</p>
-            </div>
-            <div class="flex justify-end mt-6 sm:mt-8">
-              <a 
-                href={link}
-                class="inline-flex items-center px-4 sm:px-6 py-2.5 sm:py-3 text-base sm:text-lg font-medium border rounded-lg focus:z-10 focus:outline-none bg-green-600 border-green-700 text-white hover:bg-green-700 transition-colors duration-300"
-              >
-                Conocer más
-              </a>
-            </div>
-          </div>
-        )
-      })
-    }
-  </div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
+  {services.map(service => (
+    <a 
+      href={service.href} 
+      class="group relative overflow-hidden rounded-lg bg-slate-800/55 border border-slate-700/50 p-6 sm:p-8 hover:bg-slate-800/75 transition-colors duration-300"
+    >
+      <div class="flex flex-col gap-4 sm:gap-5">
+        <h3 class="text-xl sm:text-2xl lg:text-3xl font-bold text-yellow-500 group-hover:text-yellow-400 transition-colors">
+          {service.name}
+        </h3>
+        <p class="text-base sm:text-lg lg:text-xl text-gray-300 leading-relaxed">
+          {service.description}
+        </p>
+        <div class="flex items-center gap-2 text-yellow-500 group-hover:text-yellow-400 transition-colors">
+          <span class="text-sm sm:text-base lg:text-lg">Ver más</span>
+          <svg xmlns="http://www.w3.org/2000/svg" class="size-4 sm:size-5 lg:size-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M5 12h14"/>
+            <path d="m12 5 7 7-7 7"/>
+          </svg>
+        </div>
+      </div>
+    </a>
+  ))}
 </div>
 
