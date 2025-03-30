@@ -1,26 +1,48 @@
 ---
 const services = [
   {
-    name: 'Automatización de procesos',
-    description: 'Creación de automatizaciones eficientes y personalizadas para frontend, utilizando tecnologías como JavaScript. Esto permite la optimización de procesos, mejora de flujos de trabajo y reducción de errores adaptados a las necesidades de cada proyecto.'
+    name: 'Diseño de Landing Pages Profesionales',
+    description: 'Desarrollo de landing page personalizada basada en tus preferencias y necesidades. Incluye: Diseño responsivo y moderno, optimización SEO, formularios de contacto, integración con redes sociales, análisis de Google Analytics, optimización de velocidad y entrega garantizada en máximo 3 semanas. Trabajamos contigo para crear la página web perfecta que represente tu marca.',
+    link: '/services/landing-page'
   }, 
   {
-    name: 'Desarrollo de páginas web',
-    description: 'Desarrollo de páginas web optimizadas y eficientes, utilizando tecnologías como HTML, CSS, JavaScript, Tailwind, y Astro para un rendimiento superior. También se implementan soluciones dinámicas con CMS como WordPress. No incluye diseño, solo la implementación y desarrollo técnico.'
+    name: 'Plan de Mantenimiento y Ajustes',
+    description: 'Suscripción mensual que incluye: 25 ajustes menores mensuales (cambios de texto, imágenes, estilos, etc.), 3 ajustes mayores (nuevas funcionalidades, secciones completas, integraciones), soporte técnico prioritario, copias de seguridad semanales y monitoreo de rendimiento. Ideal para mantener tu sitio web actualizado y funcional.',
+    link: '/services/maintenance'
+  },
+  {
+    name: 'Desarrollo de Automatizaciones',
+    description: 'Creación de software y automatizaciones personalizadas utilizando JavaScript y tecnologías web modernas como Astro. Desarrollamos soluciones específicas para optimizar procesos, mejorar flujos de trabajo y reducir tareas manuales. Incluye análisis de requisitos, desarrollo, pruebas y capacitación de uso.',
+    link: '/services/automation'
   }
 ]
 ---
 
-<ol class="relative ml-2 border-s border-slate-500 "> 
-  {
-    services.map(({name, description}) => {
-      return <li class="mb-5 ms-4 py-4">
-        <div class="absolute size-4 rounded-full -start-2 border  border-yellow-500 bg-yellow-500"></div>
-        <h3 class="mb-1 text-xl font-bold leading-none text-yellow-500">{name}</h3>
-        <p class="my-4 text-lg font-normal text-white">{description}</p>
-        <a href="mailto:Juanchoramirez2001@gmail.com" class="inline-flex items-center px-4 py-2 text-normal font-medium border rounded-lg focus:z-10  focus:outline-none  bg-green-600 border-green-700  text-white hover:bg-green-700">Cotizar</a>
-      </li>
-    })
-  }                
-</ol>
+<div class="container mx-auto">
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+    {
+      services.map(({name, description, link}) => {
+        return (
+          <div class="group relative bg-slate-800/50 border border-slate-700 rounded-xl p-4 sm:p-6 hover:border-yellow-500 transition-all duration-300 flex flex-col min-h-[350px] sm:min-h-[400px]">
+            <div class="absolute -top-3 -left-3 flex items-center justify-center">
+              <div class="size-5 sm:size-6 rounded-full border border-yellow-500 bg-yellow-500"></div>
+            </div>
+            <div class="flex-1">
+              <h3 class="text-lg sm:text-xl font-bold text-yellow-500 mb-3 sm:mb-4">{name}</h3>
+              <p class="text-slate-300 text-sm leading-relaxed line-clamp-6 sm:line-clamp-none">{description}</p>
+            </div>
+            <div class="flex justify-end mt-4 sm:mt-6">
+              <a 
+                href={link}
+                class="inline-flex items-center px-3 sm:px-4 py-2 text-sm font-medium border rounded-lg focus:z-10 focus:outline-none bg-green-600 border-green-700 text-white hover:bg-green-700 transition-colors duration-300"
+              >
+                Conocer más
+              </a>
+            </div>
+          </div>
+        )
+      })
+    }
+  </div>
+</div>
 

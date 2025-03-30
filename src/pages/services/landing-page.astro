@@ -1,0 +1,94 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import SectionContainer from '../../components/SectionContainer.astro';
+
+const service = {
+  name: 'Diseño de Landing Pages Profesionales',
+  description: 'Desarrollo de landing page personalizada basada en tus preferencias y necesidades. Incluye: Diseño responsivo y moderno, optimización SEO, formularios de contacto, integración con redes sociales, análisis de Google Analytics, optimización de velocidad y entrega garantizada en máximo 3 semanas. Trabajamos contigo para crear la página web perfecta que represente tu marca.',
+  features: [
+    'Diseño responsivo y moderno',
+    'Optimización SEO',
+    'Formularios de contacto',
+    'Integración con redes sociales',
+    'Análisis de Google Analytics',
+    'Optimización de velocidad',
+    'Entrega garantizada en máximo 3 semanas'
+  ]
+}
+---
+
+<Layout title={`${service.name} - Juan Ramírez`}>
+  <SectionContainer class="pt-20 sm:pt-40 pb-20">
+    <div class="container mx-auto">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center gap-4 mb-6 sm:mb-8">
+          <a href="/" class="text-yellow-500 hover:text-yellow-400 transition-colors text-sm sm:text-base">
+            ← Volver
+          </a>
+          <div class="size-5 sm:size-6 rounded-full border border-yellow-500 bg-yellow-500"></div>
+        </div>
+        
+        <h1 class="text-3xl sm:text-4xl font-bold text-yellow-500 mb-4 sm:mb-6">{service.name}</h1>
+        
+        <div class="prose prose-invert max-w-none">
+          <p class="text-base sm:text-lg text-slate-300 mb-6 sm:mb-8">{service.description}</p>
+          
+          <h2 class="text-xl sm:text-2xl font-bold text-yellow-500 mb-3 sm:mb-4">Características incluidas:</h2>
+          <ul class="space-y-2 sm:space-y-3">
+            {service.features.map(feature => (
+              <li class="flex items-center gap-2 text-slate-300 text-sm sm:text-base">
+                <span class="size-1.5 sm:size-2 rounded-full bg-yellow-500"></span>
+                {feature}
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <div class="mt-8 sm:mt-12 flex justify-center">
+          <a 
+            href="mailto:Juanchoramirez2001@gmail.com" 
+            class="inline-flex items-center px-4 sm:px-6 py-2.5 sm:py-3 text-base sm:text-lg font-medium border rounded-lg focus:z-10 focus:outline-none bg-green-600 border-green-700 text-white hover:bg-green-700 transition-colors duration-300"
+          >
+            Solicitar cotización
+          </a>
+        </div>
+      </div>
+    </div>
+  </SectionContainer>
+</Layout>
+
+<style>
+  /* View Transitions API */
+  @keyframes fade-in {
+    from { opacity: 0; }
+  }
+  @keyframes fade-out {
+    to { opacity: 0; }
+  }
+  @keyframes slide-from-right {
+    from { transform: translateX(30px); }
+  }
+  @keyframes slide-to-left {
+    to { transform: translateX(-30px); }
+  }
+  @keyframes slide-from-left {
+    from { transform: translateX(-30px); }
+  }
+  @keyframes slide-to-right {
+    to { transform: translateX(30px); }
+  }
+
+  ::view-transition-old(root) {
+    animation: 90ms cubic-bezier(0.4, 0, 1, 1) both fade-out, slide-to-left;
+  }
+
+  ::view-transition-new(root) {
+    animation: 90ms cubic-bezier(0, 0, 0.3, 1) 90ms both fade-in, slide-from-right;
+  }
+
+  /* Ensure images maintain aspect ratio */
+  img {
+    aspect-ratio: 16/9;
+    object-fit: cover;
+  }
+</style> 
