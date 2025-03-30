@@ -22,16 +22,18 @@ const services = [
   {services.map(service => (
     <a 
       href={service.href} 
-      class="group relative overflow-hidden rounded-lg bg-slate-800/55 border border-slate-700/50 p-6 sm:p-8 hover:bg-slate-800/75 transition-colors duration-300"
+      class="group relative overflow-hidden rounded-lg bg-slate-800/55 border border-slate-700/50 p-4 sm:p-6 hover:bg-slate-800/75 transition-colors duration-300"
     >
-      <div class="flex flex-col gap-4 sm:gap-5">
-        <h3 class="text-xl sm:text-2xl lg:text-3xl font-bold text-yellow-500 group-hover:text-yellow-400 transition-colors">
-          {service.name}
-        </h3>
-        <p class="text-base sm:text-lg lg:text-xl text-gray-300 leading-relaxed">
-          {service.description}
-        </p>
-        <div class="flex items-center gap-2 text-yellow-500 group-hover:text-yellow-400 transition-colors">
+      <div class="flex flex-col h-full">
+        <div class="flex-1">
+          <h3 class="text-lg sm:text-xl lg:text-2xl font-bold text-yellow-500 group-hover:text-yellow-400 transition-colors line-clamp-2">
+            {service.name}
+          </h3>
+          <p class="text-base sm:text-lg lg:text-xl text-gray-300 leading-relaxed mt-4">
+            {service.description}
+          </p>
+        </div>
+        <div class="flex items-center justify-end gap-2 text-yellow-500 group-hover:text-yellow-400 transition-colors mt-6">
           <span class="text-sm sm:text-base lg:text-lg">Ver más</span>
           <svg xmlns="http://www.w3.org/2000/svg" class="size-4 sm:size-5 lg:size-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <path d="M5 12h14"/>
