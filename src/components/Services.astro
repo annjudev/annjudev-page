@@ -19,22 +19,22 @@ const services = [
 ---
 
 <div class="container mx-auto">
-  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
     {
       services.map(({name, description, link}) => {
         return (
-          <div class="group relative bg-slate-800/50 border border-slate-700 rounded-xl p-4 sm:p-6 hover:border-yellow-500 transition-all duration-300 flex flex-col min-h-[350px] sm:min-h-[400px]">
-            <div class="absolute -top-3 -left-3 flex items-center justify-center">
-              <div class="size-5 sm:size-6 rounded-full border border-yellow-500 bg-yellow-500"></div>
+          <div class="group relative bg-slate-800/50 border border-slate-700 rounded-xl p-6 sm:p-8 hover:border-yellow-500 transition-all duration-300 flex flex-col min-h-[400px] sm:min-h-[450px]">
+            <div class="absolute -top-4 -left-4 flex items-center justify-center">
+              <div class="size-6 sm:size-7 rounded-full border border-yellow-500 bg-yellow-500"></div>
             </div>
             <div class="flex-1">
-              <h3 class="text-lg sm:text-xl font-bold text-yellow-500 mb-3 sm:mb-4">{name}</h3>
-              <p class="text-slate-300 text-sm leading-relaxed line-clamp-6 sm:line-clamp-none">{description}</p>
+              <h3 class="text-xl sm:text-2xl font-bold text-yellow-500 mb-4 sm:mb-6">{name}</h3>
+              <p class="text-slate-300 text-base sm:text-lg leading-relaxed line-clamp-6 sm:line-clamp-none">{description}</p>
             </div>
-            <div class="flex justify-end mt-4 sm:mt-6">
+            <div class="flex justify-end mt-6 sm:mt-8">
               <a 
                 href={link}
-                class="inline-flex items-center px-3 sm:px-4 py-2 text-sm font-medium border rounded-lg focus:z-10 focus:outline-none bg-green-600 border-green-700 text-white hover:bg-green-700 transition-colors duration-300"
+                class="inline-flex items-center px-4 sm:px-6 py-2.5 sm:py-3 text-base sm:text-lg font-medium border rounded-lg focus:z-10 focus:outline-none bg-green-600 border-green-700 text-white hover:bg-green-700 transition-colors duration-300"
               >
                 Conocer más
               </a>

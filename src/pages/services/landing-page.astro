@@ -18,36 +18,36 @@ const service = {
 ---
 
 <Layout title={`${service.name} - Juan Ramírez`}>
-  <SectionContainer class="pt-20 sm:pt-40 pb-20">
+  <SectionContainer class="pt-24 sm:pt-40 pb-24">
     <div class="container mx-auto">
-      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex items-center gap-4 mb-6 sm:mb-8">
-          <a href="/" class="text-yellow-500 hover:text-yellow-400 transition-colors text-sm sm:text-base">
+      <div class="max-w-4xl mx-auto px-6 sm:px-8 lg:px-12">
+        <div class="flex items-center gap-4 mb-8 sm:mb-12">
+          <a href="/" class="text-yellow-500 hover:text-yellow-400 transition-colors text-base sm:text-lg">
             ← Volver
           </a>
-          <div class="size-5 sm:size-6 rounded-full border border-yellow-500 bg-yellow-500"></div>
+          <div class="size-6 sm:size-7 rounded-full border border-yellow-500 bg-yellow-500"></div>
         </div>
         
-        <h1 class="text-3xl sm:text-4xl font-bold text-yellow-500 mb-4 sm:mb-6">{service.name}</h1>
+        <h1 class="text-4xl sm:text-5xl font-bold text-yellow-500 mb-6 sm:mb-8">{service.name}</h1>
         
         <div class="prose prose-invert max-w-none">
-          <p class="text-base sm:text-lg text-slate-300 mb-6 sm:mb-8">{service.description}</p>
+          <p class="text-lg sm:text-xl text-slate-300 mb-8 sm:mb-12 leading-relaxed">{service.description}</p>
           
-          <h2 class="text-xl sm:text-2xl font-bold text-yellow-500 mb-3 sm:mb-4">Características incluidas:</h2>
-          <ul class="space-y-2 sm:space-y-3">
+          <h2 class="text-2xl sm:text-3xl font-bold text-yellow-500 mb-6 sm:mb-8">Características incluidas:</h2>
+          <ul class="space-y-4 sm:space-y-5">
             {service.features.map(feature => (
-              <li class="flex items-center gap-2 text-slate-300 text-sm sm:text-base">
-                <span class="size-1.5 sm:size-2 rounded-full bg-yellow-500"></span>
+              <li class="flex items-center gap-3 text-slate-300 text-base sm:text-lg">
+                <span class="size-2 sm:size-2.5 rounded-full bg-yellow-500"></span>
                 {feature}
               </li>
             ))}
           </ul>
         </div>
 
-        <div class="mt-8 sm:mt-12 flex justify-center">
+        <div class="mt-12 sm:mt-16 flex justify-center">
           <a 
             href="mailto:Juanchoramirez2001@gmail.com" 
-            class="inline-flex items-center px-4 sm:px-6 py-2.5 sm:py-3 text-base sm:text-lg font-medium border rounded-lg focus:z-10 focus:outline-none bg-green-600 border-green-700 text-white hover:bg-green-700 transition-colors duration-300"
+            class="inline-flex items-center px-6 sm:px-8 py-3 sm:py-4 text-lg sm:text-xl font-medium border rounded-lg focus:z-10 focus:outline-none bg-green-600 border-green-700 text-white hover:bg-green-700 transition-colors duration-300"
           >
             Solicitar cotización
           </a>
