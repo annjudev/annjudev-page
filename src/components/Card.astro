@@ -5,7 +5,7 @@ const {
 } = Astro.props
 ---
 
-<article class={`${Astro.props.class} relative min-h-[22rem]`}>
+<article class={`${Astro.props.class} relative min-h-[18rem] sm:min-h-[22rem]`}>
   <div 
     class="
       absolute
@@ -23,9 +23,9 @@ const {
       absolute z-10 bottom-0 top-0 w-full h-full
       bg-gradient-to-b from-transparent via-black/40 to-black"></div>
     
-    <div class="z-20 py-4 px-4 flex flex-col gap-4">
-      <h4 class="font-bold text-2xl">{title}</h4>
-      <p class="font-normal text-balance">
+    <div class="z-20 py-3 sm:py-4 px-3 sm:px-4 flex flex-col gap-2 sm:gap-4">
+      <h4 class="font-bold text-xl sm:text-2xl">{title}</h4>
+      <p class="font-normal text-sm sm:text-base text-balance">
         <slot />
       </p>
     </div>

@@ -1,25 +1,131 @@
+---
+// No necesitamos importar CSS externo ya que usaremos estilos scoped
+---
 
-
-<header class="w-full fixed py-4 top-0">
-  <nav class="py-2 mx-auto m-auto max-w-96 px-3 rounded-full flex justify-center w-full">
-    <!-- <a href="#home" class="flex pl-2 justify-center items-center gap-3">
-      <img class="size-6 rounded-full" src="/juan-ramirez-foto.jpg" alt="">@annjudev</a> -->
-    <ul class="flex justify-center w-full [&>li>a]:p-2 [&>li>a:hover]:text-yellow-300 font-medium text-base">
-      <li><a href="#services">Servicios</a></li>
-      <li><a href="#works">Trabajos</a></li>
-      <li><a href="#about-me">Sobre mí</a></li>
-      <li><a href="mailto:Juanchoramirez2001@gmail.com">Contancto</a></li>
+<header class="header" role="banner">
+  <nav class="nav" role="navigation" aria-label="Navegación principal">
+    <ul class="nav-list" role="menubar">
+      <li role="none"><a href="#services" class="nav-link" role="menuitem">Servicios</a></li>
+      <li role="none"><a href="#works" class="nav-link" role="menuitem">Trabajos</a></li>
+      <li role="none"><a href="#about-me" class="nav-link" role="menuitem">Sobre mí</a></li>
+      <li role="none"><a href="mailto:Juanchoramirez2001@gmail.com" class="nav-link" role="menuitem">Contacto</a></li>
     </ul>
   </nav>
-
-  <script>
-    window.addEventListener('scroll', () => {
-      const nav = document.querySelector('nav')
-      
-      window.scrollY > 0 
-      ? nav.classList.add('bottom')
-      : nav.classList.remove('bottom')
-      
-    })
-  </script>
 </header>
+
+<style>
+  .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 50;
+    transition: all 0.3s ease;
+  }
+
+  .nav {
+    padding: 1rem;
+    transition: all 0.3s ease;
+  }
+
+  .nav-list {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .nav-link {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s ease;
+    position: relative;
+  }
+
+  .nav-link:hover {
+    color: #fbbf24; /* text-yellow-400 */
+  }
+
+  .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #fbbf24;
+    transform: scaleX(0);
+    transition: transform 0.2s ease;
+  }
+
+  .nav-link:hover::after {
+    transform: scaleX(1);
+  }
+
+  /* Ajustes para móvil */
+  @media (max-width: 640px) {
+    .nav-list {
+      gap: 1rem;
+      padding: 0 0.5rem;
+    }
+
+    .nav-list {
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+      padding-bottom: 0.5rem;
+    }
+
+    .nav-list::-webkit-scrollbar {
+      display: none;
+    }
+
+    .nav-link {
+      white-space: nowrap;
+      font-size: 0.875rem;
+    }
+  }
+</style>
+
+<script>
+  let ticking = false;
+  const header = document.querySelector('.header');
+  const nav = document.querySelector('.nav') as HTMLElement;
+  const SCROLL_THRESHOLD = 100;
+
+  const updateHeader = (scrollPosition: number) => {
+    if (scrollPosition > 0) {
+      const opacity = Math.min(scrollPosition / SCROLL_THRESHOLD, 1);
+      
+      nav.style.setProperty('backdrop-filter', `blur(${opacity * 10}px)`);
+      nav.style.setProperty('-webkit-backdrop-filter', `blur(${opacity * 10}px)`);
+      nav.style.backgroundColor = `rgba(255, 255, 255, ${opacity * 0.1})`;
+      
+      if (opacity === 1) {
+        nav.style.boxShadow = '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)';
+      } else {
+        nav.style.boxShadow = 'none';
+      }
+    } else {
+      nav.style.setProperty('backdrop-filter', 'none');
+      nav.style.setProperty('-webkit-backdrop-filter', 'none');
+      nav.style.backgroundColor = 'transparent';
+      nav.style.boxShadow = 'none';
+    }
+  };
+
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        updateHeader(window.scrollY);
+        ticking = false;
+      });
+      ticking = true;
+    }
+  });
+</script>
