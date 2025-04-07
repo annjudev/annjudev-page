@@ -8,6 +8,7 @@ import WhatsApp from '../icons/WhatsApp.astro';
 import Services from '../components/Services.astro';
 import Card from '../components/Card.astro';
 import Tecnologies from '../components/Tecnologies.astro';
+import Headers from '../components/Headers.astro';
 const services = [
 	{
 		title: "Desarrollo Web Moderno",
@@ -29,8 +30,9 @@ const services = [
 ---
 
 <Layout title="Juan Ramírez - Desarrollador Web Frontend">
+	<Headers />
 	<SectionContainer class="min-h-screen flex items-center">
-		<div class="max-w-4xl mx-auto text-center space-y-8 lg:space-y-12">
+		<div class="max-w-4xl mx-auto text-center space-y-8 lg:space-y-4 1xl:space-y-12">
 			<div class="space-y-6 lg:space-y-8">
 				<h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold">
 					<span class="text-base sm:text-lg md:text-xl lg:text-2xl block mb-3 lg:mb-4 text-yellow-500">¡Hola! 👋🏽</span>
@@ -105,7 +107,7 @@ const services = [
 					</div>
 				</div>
 			</div>
-			<img class="rounded-2xl w-[250px] h-[250px] sm:w-[280px] sm:h-[280px] lg:w-[300px] lg:h-[300px] mx-auto lg:mx-0 bg-slate-800/55 rotate-[20deg] -z-10 p-3 rounded border-2 border-slate-900 object-cover" src="juan-ramirez-foto.jpg" alt="Juan Ramírez - Desarrollador Web Frontend">
+			<img class="rounded-2xl w-[250px] h-[250px] sm:w-[280px] sm:h-[280px] lg:w-[300px] lg:h-[300px] mx-auto lg:mx-0 bg-slate-800/55 lg:rotate-[20deg] -z-10 p-3 rounded border-2 border-slate-900 object-cover" src="juan-ramirez-foto.jpg" alt="Juan Ramírez - Desarrollador Web Frontend">
 		</div>
 	</SectionContainer>
 </Layout>
